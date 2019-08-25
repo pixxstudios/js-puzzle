@@ -1,3 +1,5 @@
+import { Board } from './board.js';
+
 export class Game {
     constructor() {
         this.gameContainer = document.createElement('div');
