@@ -29,11 +29,30 @@ export class Board {
         let curRow = 1;
         let curCol = 1;
         for(let i=0; i<numTiles; i++) {
-
+            // ignore 0 which is the blank space
+            if(this.tileOrder[i] !== 0) {
+                const tile = new tile({
+                    number: this.tileOrder[i],
+                    size: this.tileSize,
+                    margin: this.tileMargin,
+                    row: curRow,
+                    col: curCol,
+                    onClickHandler: (number) => this.onTileClick(number)
+                });
+                this.tile.push(tile);
+                this.boardContainer.appendChild(tile.element);
+            }
+            if (curCol < this.boardSize) {
+                curCol++;
+            } else {
+                curCol = 1;
+                curRow++;
+            }
         }
+        this.setBoardHeight();
     }
 
-    ontileClick() {
+    onTileClick() {
 
     }
 
