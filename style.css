@@ -1,0 +1,14 @@
+.board {
+    border: 1px solid red;
+    width: 400px;
+    height: 400px;
+}
+
+.tile {
+    width: 94px;
+    height: 94px;
+    border: 1px solid blue;
+    float: left;
+    margin: 2px;
+    cursor: pointer;
+}
