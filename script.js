@@ -1,4 +1,4 @@
-import { Shuffle } from './util.js';
+import { Shuffle } from './helpers.js';
 
 (function(){
     // variables
@@ -11,7 +11,7 @@ import { Shuffle } from './util.js';
     document.querySelector('body').appendChild(board);
 
 
-    TileNums = Shuffle(TileNums);
+    Shuffle(TileNums);
 
     // Create the tiles
     for(let i=1 ; i<16; i++) {
