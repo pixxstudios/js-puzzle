@@ -27,4 +27,5 @@ import { Shuffle } from './helpers.js';
         Tiles.push(tile);
         board.appendChild(tile);
     }
+    console.log(Tiles);
 })();
