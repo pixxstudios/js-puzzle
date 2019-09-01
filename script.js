@@ -10,8 +10,13 @@ import { Shuffle } from './helpers.js';
     board.classList.add('board');
     document.querySelector('body').appendChild(board);
 
+    // create blank tile
+    let blackTile  = document.createElement('div');
+    blackTile.classList.add('blankTile');
+    Tiles.push(blackTile);
 
     Shuffle(TileNums);
+    board.appendChild(blackTile);
 
     // Create the tiles
     for(let i=1 ; i<16; i++) {
