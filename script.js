@@ -11,9 +11,9 @@ import { Shuffle } from './helpers.js';
     document.querySelector('body').appendChild(board);
 
     // create blank tile
-    let blackTile  = document.createElement('div');
-    blackTile.classList.add('blankTile');
-    Tiles.push(blackTile);
+    let blankTile  = document.createElement('div');
+    blankTile.classList.add('blankTile');
+    Tiles.push(blankTile);
 
     // Create the tiles
     for(let i=1 ; i<16; i++) {
