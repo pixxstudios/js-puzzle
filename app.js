@@ -4,12 +4,6 @@ import { Shuffle } from './helpers.js';
     // variables
     let Tiles = [];
     const boardSize = 4;
-    let TileNums = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
-
-    // create the board
-    let board = document.createElement('div');
-    board.classList.add('board');
-    document.querySelector('body').appendChild(board);
 
     // create blank tile
     let blankTile  = document.createElement('div');
@@ -21,7 +15,7 @@ import { Shuffle } from './helpers.js';
     for(let i=1 ; i<numTiles; i++) {
         let tile = document.createElement('div');
         tile.classList.add('tile');
-        tile.innerHTML = TileNums[i-1].toString();
+        tile.innerHTML = i.toString();
         Tiles.push(tile);
     }
 
