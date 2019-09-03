@@ -5,8 +5,8 @@ export default class Board{
 
     createBoard() {
         // create the board
-        let board = document.createElement('div');
-        board.classList.add('board');
-        document.querySelector('body').appendChild(board);
+        this.board = document.createElement('div');
+        this.board.classList.add('board');
+        document.querySelector('body').appendChild(this.board);
     }
 }
