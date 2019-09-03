@@ -1,7 +1,20 @@
 import Board from './components/board.js';
 
-(function(){
-    const boardSize = 4;
-    const board = new Board(boardSize);
-    board.createBoard();
+(() => {
+    function init() {
+        newGame();
+        newGameButton();
+    }
+
+    function newGame() {
+        const boardSize = 4;
+        const board = new Board(boardSize);
+        board.createBoard();
+    }
+
+    function newGameButton() {
+
+    }
+
+    init();
 })();
