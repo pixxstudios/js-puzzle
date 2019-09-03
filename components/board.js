@@ -1,14 +1,16 @@
 import Tiles from './tiles.js';
+import { Shuffle } from '../helpers.js';
 
 export default class Board{
     constructor(boardSize) {
         this.boardSize = boardSize;
         this.numTiles = Math.pow(this.boardSize, 2);
+        this.Tiles = [];
     }
 
     addTiles(i) {
         const tiles = new Tiles(i);
-        tiles.createTiles();
+        this.Tiles.push(tiles.createTiles());
     }
 
     createBoard() {
@@ -20,5 +22,8 @@ export default class Board{
         for(var i=0; i<this.numTiles; i++) {
             this.addTiles(i);
         }
+
+        Shuffle(this.Tiles);
+        this.Tiles.forEach(tile => this.board.appendChild(tile));
     }
 }

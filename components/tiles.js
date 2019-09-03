@@ -4,11 +4,18 @@ export default class Tiles{
     }
 
     createTiles() {
-    // Create the tiles
-    let tile = document.createElement('div');
-    tile.classList.add('tile');
-    tile.innerHTML = this.id.toString();
-    // Tiles.push(tile);
-    return tile;
+        // Create the tiles
+        if(this.id === 0) return this.addEmptyTile();
+        let tile = document.createElement('div');
+        tile.classList.add('tile');
+        tile.innerHTML = this.id.toString();
+        return tile;
+    }
+
+    addEmptyTile() {
+        // create blank tile
+        let blankTile  = document.createElement('div');
+        blankTile.classList.add('blankTile');
+        return blankTile;
     }
 }
