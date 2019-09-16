@@ -14,7 +14,9 @@ import Board from './components/board.js';
 
     function newGameButton() {
         const newGameBtn = document.createElement('button');
-        
+        newGameBtn.innerText = "New Game";
+        newGameBtn.classList.add('newGameBtn');
+        document.querySelector('body').appendChild(newGameBtn);
     }
 
     init();
