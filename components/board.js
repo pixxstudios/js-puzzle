@@ -13,6 +13,13 @@ export default class Board{
         this.Tiles.push(tiles.createTiles());
     }
 
+    clearBoard() {
+        const board = document.querySelector('.board');
+        if (board !== null) {
+            document.querySelector('body').removeChild(board);
+        }
+    }
+
     createBoard() {
         // create the board
         this.board = document.createElement('div');
