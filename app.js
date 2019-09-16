@@ -13,7 +13,8 @@ import Board from './components/board.js';
     }
 
     function newGameButton() {
-
+        const newGameBtn = document.createElement('button');
+        
     }
 
     init();

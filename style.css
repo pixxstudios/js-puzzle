@@ -25,8 +25,6 @@
 .blankTile {
     width: 94px;
     height: 94px;
-    background: rgb(250, 224, 23);
-    border-radius: 10px;
     float: left;
     margin: 3px;
 }
