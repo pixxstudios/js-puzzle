@@ -1,5 +1,5 @@
 import Tiles from './tiles.js';
-import { Shuffle } from '../helpers.js';
+import { Shuffle, TileClick } from '../helpers.js';
 
 export default class Board{
     constructor(boardSize) {
@@ -31,6 +31,12 @@ export default class Board{
         }
 
         Shuffle(this.Tiles);
-        this.Tiles.forEach(tile => this.board.appendChild(tile));
+        this.Tiles.forEach(tile => {
+            this.board.appendChild(tile);
+            tile.addEventListener('click', function() {
+                console.log(this.innerHTML);
+                TileClick(this.innerHTML);
+            });
+        })
     }
 }
