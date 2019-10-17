@@ -34,7 +34,6 @@ export default class Board{
         this.Tiles.forEach(tile => {
             this.board.appendChild(tile);
             tile.addEventListener('click', function() {
-                console.log(this.innerHTML);
                 TileClick(this.innerHTML);
             });
         })
