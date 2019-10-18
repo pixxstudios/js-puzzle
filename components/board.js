@@ -21,6 +21,7 @@ export default class Board {
     }
     createBoard() {
         // create the board
+        let moves = 0;
         this.board = document.createElement('div');
         this.board.classList.add('board');
         document.querySelector('body').appendChild(this.board);
@@ -35,8 +36,8 @@ export default class Board {
             tile.addEventListener('click', function () {
                 TileClick(this.innerHTML,
                     function (newTiles) {
-
                         _.innerHTML = "";
+                        document.querySelector('#moves-container').innerHTML = `Moves: ${++moves}`;
                         newTiles.forEach(t => {
                             board.appendChild(t);
                         })

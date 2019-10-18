@@ -11,6 +11,11 @@ import Board from './components/board.js';
         const board = new Board(boardSize);
         board.clearBoard();
         board.createBoard();
+        resetMoves();
+    }
+
+    function resetMoves() {
+        document.getElementById('moves-container').innerHTML = "Moves: 0";
     }
 
     function newGameButton() {

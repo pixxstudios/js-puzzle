@@ -47,3 +47,10 @@
 .newGameBtn:hover {
     background-color: #456c6d;
 }
+
+#moves-container {
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #456c6d;
+    margin-bottom: 20px;
+}
