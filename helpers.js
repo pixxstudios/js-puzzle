@@ -71,3 +71,18 @@ export function TileClick(position, callback) {
         callback(tiles);
     }
 }
+
+export function hasWonGame(tilesArray) {
+    // check if first 15 elements in array are from 1 to 15
+    // if yes, then won
+    let hasWon = true;
+
+    for(let i = 0; i< 14; i++) {
+        if (tilesArray[i].innerHTML !== tilesArray[i+1].innerHTML) {
+            hasWon = false;
+            break;
+        }
+    }
+    console.log('hasWon ', hasWon);
+    return hasWon;
+}

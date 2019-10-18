@@ -1,7 +1,8 @@
 import Tiles from './tiles.js';
 import {
     Shuffle,
-    TileClick
+    TileClick,
+    hasWonGame
 } from '../helpers.js';
 export default class Board {
     constructor(boardSize) {
@@ -36,11 +37,13 @@ export default class Board {
             tile.addEventListener('click', function () {
                 TileClick(this.innerHTML,
                     function (newTiles) {
+                        if (!hasWonGame(newTiles)) {
                         _.innerHTML = "";
                         document.querySelector('#moves-container').innerHTML = `Moves: ${++moves}`;
                         newTiles.forEach(t => {
                             board.appendChild(t);
                         })
+                    }
                     });
             });
         })
