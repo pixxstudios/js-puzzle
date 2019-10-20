@@ -77,12 +77,13 @@ export function hasWonGame(tilesArray) {
     // if yes, then won
     let hasWon = true;
 
-    for(let i = 0; i< 14; i++) {
-        if (tilesArray[i].innerHTML !== tilesArray[i+1].innerHTML) {
+    for(let i = 1; i < 16; i++) {
+        hasWon = true;
+        if (tilesArray[i-1].innerHTML !== i.toString()) {
             hasWon = false;
             break;
         }
     }
-    console.log('hasWon ', hasWon);
+
     return hasWon;
 }
