@@ -17,7 +17,7 @@ export default class Board {
     clearBoard() {
         const board = document.querySelector('.board');
         if (board !== null) {
-            document.querySelector('body').removeChild(board);
+            document.querySelector('#puzzle-container').removeChild(board);
         }
     }
     createBoard() {
@@ -25,7 +25,7 @@ export default class Board {
         let moves = 0;
         this.board = document.createElement('div');
         this.board.classList.add('board');
-        document.querySelector('body').appendChild(this.board);
+        document.querySelector('#puzzle-container').appendChild(this.board);
         for (var i = 0; i < this.numTiles; i++) {
             this.addTiles(i);
         }

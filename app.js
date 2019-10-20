@@ -23,7 +23,7 @@ import Board from './components/board.js';
         newGameBtn.innerText = "New Game";
         newGameBtn.classList.add('newGameBtn');
         newGameBtn.addEventListener('click', newGame);
-        document.querySelector('body').appendChild(newGameBtn);
+        document.querySelector('#button-container').appendChild(newGameBtn);
     }
 
     init();
