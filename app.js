@@ -23,6 +23,10 @@ import Board from './components/board.js';
         document.getElementById('timer-container').innerHTML = "Time: 0 Seconds";
     }
 
+    function startTimer() {
+        console.log('started');
+    }
+
     function newGameButton() {
         const newGameBtn = document.createElement('button');
         newGameBtn.innerText = "New Game";
