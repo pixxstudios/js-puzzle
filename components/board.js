@@ -1,4 +1,5 @@
 import Tiles from './tiles.js';
+import Won from './gamewon.js';
 import {
     Shuffle,
     TileClick,
