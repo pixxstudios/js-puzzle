@@ -12,10 +12,15 @@ import Board from './components/board.js';
         board.clearBoard();
         board.createBoard();
         resetMoves();
+        resetTimer();
     }
 
     function resetMoves() {
         document.getElementById('moves-container').innerHTML = "Moves: 0";
+    }
+
+    function resetTimer() {
+        document.getElementById('timer-container').innerHTML = "Time: 0 Seconds";
     }
 
     function newGameButton() {
